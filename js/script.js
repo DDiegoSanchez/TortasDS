@@ -1,7 +1,13 @@
 //alert("hola");
 
-function ticketVenta (){
+/*refrescar pantalla*/
+function refreshPage() {
+    location.reload();
+}
 
+
+function ticketVenta (){
+    
     function tortaPago ($cantidad, $nombre, $picante, $precio){
         
        if($cantidad != 0){
@@ -151,10 +157,17 @@ function ticketVenta (){
     capa.appendChild(conBoton);
     conBoton.style.display = "flex";
     conBoton.style.justifyContent = "center";
-    var boton = document.createElement("a");
+    var boton = document.createElement("button");
     boton.innerHTML = "Voler al Menú";
     boton.setAttribute("class", "boton aceptar")
-    boton.setAttribute("href", "/");
+    boton.setAttribute("onclick", "refreshPage()");
     //boton.style.
     conBoton.appendChild(boton);
+    
+    /*var conBoton = `
+    <div style="display: flex; justify-content: center;">
+    <button class="boton aceptar" onclick="${refreshPage()}">Voler al Menú</button>
+    </div>`
+    conBoton.appendChild(boton);
+    capa.innerHTML = conBoton;*/
 }
