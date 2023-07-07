@@ -15,12 +15,16 @@ function ticketVenta (){
                 var nota = document.createElement("td");
                 nota.innerHTML = $nombre;
                 var cantidad = document.createElement("td");
+                cantidad.setAttribute("data-label", "Cantidad");
                 cantidad.innerHTML = $cantidad;
                 var picanteT = document.createElement("td");
+                picanteT.setAttribute("data-label", "Picante");
                 picanteT.innerHTML = $picante;
                 var precioT = document.createElement("td");
+                precioT.setAttribute("data-label", "Precio");
                 precioT.innerHTML = $precio;
                 var importe = document.createElement("td");
+                importe.setAttribute("data-label", "Importe");
                 importe.innerHTML = $precio * $cantidad;
                 fila.style.fontSize = "20px";
                 fila.style.fontWeight = "bold";
@@ -32,6 +36,7 @@ function ticketVenta (){
                 
                 fila.appendChild(precioT);
                 fila.appendChild(importe);
+                
             }
         }
 
@@ -163,11 +168,4 @@ function ticketVenta (){
     boton.setAttribute("onclick", "refreshPage()");
     //boton.style.
     conBoton.appendChild(boton);
-    
-    /*var conBoton = `
-    <div style="display: flex; justify-content: center;">
-    <button class="boton aceptar" onclick="${refreshPage()}">Voler al Menú</button>
-    </div>`
-    conBoton.appendChild(boton);
-    capa.innerHTML = conBoton;*/
 }

@@ -163,3 +163,7 @@ main h2{
     border: none;
     border-radius: 10px;
 }
+
+table{
+    border-collapse: collapse;
+}

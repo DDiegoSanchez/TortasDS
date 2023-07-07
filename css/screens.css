@@ -15,7 +15,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .torta{
         flex-direction: column;
         width: 300px;
@@ -33,5 +33,34 @@
 
     .boton{
         width: 80%;
+    }
+
+    table {
+        border: 0px;
+    }
+    thead{
+        display: none;
+    }
+    tr{
+        margin-bottom: 15px;
+        display: block;
+    }
+    th, td{
+        font-size: 20px;
+    }
+    td{
+        display: block;
+        border: 1px solid #ddd;
+        text-align: right;
+    }
+
+    td:last-child{
+        border-bottom: 0px;
+    }
+    td::before{
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
     }
 }
