@@ -154,7 +154,7 @@ function ticketVenta (){
     var boton = document.createElement("a");
     boton.innerHTML = "Voler al Menú";
     boton.setAttribute("class", "boton aceptar")
-    boton.setAttribute("href", "../index.html");
+    boton.setAttribute("href", "index.html");
     //boton.style.
     conBoton.appendChild(boton);
 }
